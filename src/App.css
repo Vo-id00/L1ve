@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
+/* Add this to App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  /* Changed to a dark theme background */
+  background-color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  /* Added a light text color for the dark background */
+  color: #f3f4f6;
+}
+
+/* NEW: Styles for the icon in HomeView.js */
+.home-icon {
+  height: 3rem; /* 12 * 0.25rem */
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* Changed color to the new green theme */
+  color: #10b981;
+}
+
+/* HomeView Styles */
+.home-container {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  /* Changed container background for dark mode */
+  background: #393a3c;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* Light text for dark background */
+  color: #ffffff;
+  margin-top: 1.5rem;
+}
+
+.subtitle {
+  /* Lighter text for dark background */
+  color: #d1d5db;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  /* Dark mode input styles */
+  background: #1f2937;
+  border: 1px solid #4b5563;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Changed button color to green */
+.input-container button,
+.buttons a,
+.buttons button {
+  padding: 0.75rem 1.5rem;
+  background-color: #10b981;
+  color: #1f2937; /* Dark text for better contrast on green */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold; /* Made font bold */
+  text-decoration: none; /* For the 'New Clip' link */
+  display: inline-block; /* For the 'New Clip' link */
+}
+
+/* ClipView Styles */
+.clip-container {
+  width: 90%;
+  max-width: 800px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
+  /* Dark mode container */
+  background: #374151;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.clip-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  /* Darker border for dark mode */
+  border-bottom: 1px solid #4b5563;
+}
+
+.clip-header p {
+  margin: 0;
+  /* Lighter text for dark mode */
+  color: #d1d5db;
+}
+
+/* Green-themed tag for the clip URL */
+.clip-header p span {
+  font-weight: bold;
+  background-color: #064e3b; /* Dark green */
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #a7f3d0; /* Light green text */
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+textarea {
+  flex-grow: 1;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: monospace;
+  resize: none;
+  border-radius: 0 0 8px 8px;
+  /* Dark mode text area */
+  background-color: #565657;
+  color: #f3f4f6;
+}
+textarea:focus {
+  outline: none;
+}
+
+/* This notification already fits the dark theme */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f2937;
   color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-image-icon {
+  height: 500px;  /* This sets the height (e.g., 96 pixels) */
+  width: auto;   /* This keeps the image's proportions correct */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem; /* This adds some nice space below the icon */
 }
